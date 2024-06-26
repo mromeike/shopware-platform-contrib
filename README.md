@@ -37,3 +37,19 @@ APP_ENV=test bin/console debug:...
 ## Scripts
 
 Make sure to execute any scripts (`scripts/`) from the root directory.
+
+## Plugins
+
+To create and edit plugins, add the desire path as mount, for example, in `docker-compose.override.yml`:
+
+```yaml
+services:
+
+    shopware:
+      volumes:
+        - './src/plugins:/var/www/html/custom/plugins'
+```
+
+Then run `bin/console plugin:create plugin` inside the container shell (`/var/www/html`).
+
+Feel free to use `scripts/shell.sh` as a shortcut.
