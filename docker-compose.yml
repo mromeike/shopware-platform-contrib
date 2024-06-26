@@ -1,0 +1,21 @@
+services:
+
+    shopware:
+      image: dockware/dev:latest
+      container_name: shopware
+      environment:
+        - PHP_VERSION=8.2
+      ports:
+        - "80:80"
+        - "3306:3306"
+        - "22:22"
+        - "8888:8888"
+        - "9999:9999"
+      networks:
+        - web
+      volumes:
+        - './src/platform:/var/www/html/platform'
+
+networks:
+  web:
+    external: false
