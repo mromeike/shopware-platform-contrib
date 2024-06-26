@@ -53,3 +53,5 @@ services:
 Then run `bin/console plugin:create plugin` inside the container shell (`/var/www/html`).
 
 Feel free to use `scripts/shell.sh` as a shortcut.
+
+The plugin will pop up in the `src/plugins/` directory.
